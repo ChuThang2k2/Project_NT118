@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/baseline_edit_square_24" />
+
+        <TextView
+            android:id="@+id/tv_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="152dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="#27496D"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="147dp"
+            android:layout_height="110dp"
+            android:layout_below="@+id/tv_profile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="126dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="126dp"
+            android:src="@drawable/image_intro" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_profile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="128dp"
+            android:gravity="center"
+            android:text="Admin"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#27496D"/>
+
+        <TextView
+            android:id="@+id/tv_email_address"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="70dp"
+            android:gravity="center"
+            android:text="cnt020102@mail.com"
+            android:textSize="23sp"
+            android:textColor="#27496D"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_full_name"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/tv_email_address"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/rounded_square_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Full name:"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_full_name"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Chu Thang"
+                android:textAlignment="viewEnd"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:gravity="center"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout_birth_day"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/linearLayout_full_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/rounded_square_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Birth day:"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_birth_day"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="22/2/2002"
+                android:textAlignment="viewEnd"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:gravity="center"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout_gender"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/linearLayout_birth_day"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/rounded_square_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Gender:"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Man"
+                android:textAlignment="viewEnd"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:gravity="center"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout_address"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/linearLayout_gender"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/rounded_square_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Address:"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="HO CHI MINH CITY"
+                android:textAlignment="viewEnd"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:gravity="center"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout_phone"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/linearLayout_address"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/rounded_square_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Phone:"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="0123456789"
+                android:textAlignment="viewEnd"
+                android:textColor="#27496D"
+                android:textSize="20dp"
+                android:gravity="center"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@id/linearLayout_phone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="#27496D"
+            app:cornerRadius="15dp"
+            android:text="Log Out"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</ScrollView>

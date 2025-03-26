@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/llSearchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:drawableStart="@drawable/ic_location"
+            android:drawableEnd="@drawable/ic_clear"
+            android:drawablePadding="8dp"
+            android:hint="Your location"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/etDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableEnd="@drawable/ic_clear"
+            android:drawablePadding="8dp"
+            android:hint="Where to go?"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/zoom_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="650dp"
+        android:src="@drawable/baseline_zoom_in_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/zoom_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="590dp"
+        android:src="@drawable/baseline_zoom_out_24" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFindDirections"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#27496D"
+        app:cornerRadius="15dp"
+        android:text="Find Directions"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <!-- Nút Go -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#27496D"
+            app:cornerRadius="15dp"
+            android:text="Go"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"/>
+
+        <!-- Nút Cancel -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#27496D"
+            app:cornerRadius="15dp"
+            android:text="Cancel"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvSuggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llSearchBox"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"
+        android:visibility="gone" />
+</RelativeLayout>

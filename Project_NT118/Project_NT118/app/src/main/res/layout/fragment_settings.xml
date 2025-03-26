@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SettingsFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="Pothole Settings"
+            android:layout_marginStart="40dp"
+            android:textColor="#27496D"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="Options:"
+            android:layout_marginTop="30dp"
+            android:textColor="#27496D"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSmallPothole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="16dp"
+            android:text="Small Pothole "
+            android:textSize="18dp"
+            android:textColor="#27496D"
+            />
+        <!--        <SeekBar-->
+        <!--            android:id="@+id/seekBarSmallPothole"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:max="100" />-->
+
+        <CheckBox
+            android:id="@+id/checkBoxMediumPothole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:text="Medium Pothole "
+            android:textColor="#27496D"
+            android:textSize="18dp"/>
+        <!--        <SeekBar-->
+        <!--            android:id="@+id/seekBarMediumPothole"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:max="100" />-->
+
+        <!--        <SeekBar-->
+        <!--            android:id="@+id/seekBarLargePothole"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:max="100" />-->
+
+        <CheckBox
+            android:id="@+id/checkBoxLargePothole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:text="Large Pothole "
+            android:textColor="#27496D"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Warning Distance (meters)"
+            android:textColor="#27496D"
+            android:textSize="18dp"/>
+
+        <SeekBar
+            android:id="@+id/seekBarWarningDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="190"
+            />
+
+        <TextView
+            android:id="@+id/textViewWarningDistanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="10 meters"
+            android:textColor="#27496D"
+            android:textSize="18dp" />
+    </LinearLayout>
+</ScrollView>

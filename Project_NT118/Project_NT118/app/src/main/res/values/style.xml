@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavTheme" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavTextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavTextAppearance</item>
+        <item name="backgroundTint">@color/nav_background_color</item>
+    </style>
+
+    <style name="BottomNavTextAppearance" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/nav_item_color</item>
+    </style>
+</resources>

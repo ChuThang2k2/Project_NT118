@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_3" />
+
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="197dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="68dp"
+        android:layout_marginRight="-97dp"
+        android:layout_marginBottom="-20dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/img_4" />
+
+    <TextView
+        android:id="@+id/tv_success"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginRight="120dp"
+        android:gravity="center"
+        android:text="Success"
+        android:textColor="#27496D"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_notification"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_success"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:drawablePadding="10dp"
+        android:text="Your account is ready. Let’s get start"
+        android:textColor="#27496D"
+        android:textSize="25sp" />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv_notification"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="#27496D"
+        app:cornerRadius="15dp"
+        android:text="Sign In"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF" />
+
+
+
+
+</RelativeLayout>

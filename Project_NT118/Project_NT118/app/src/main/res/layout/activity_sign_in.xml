@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/img" />
+    <ImageView
+
+        android:layout_width="220dp"
+        android:layout_height="197dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginBottom="-42dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/img_1" />
+
+    <ImageView
+        android:id="@+id/back_signin"
+        android:layout_width="72dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="58dp"
+        android:src="@drawable/img_2" />
+
+    <TextView
+        android:id="@+id/tv_signin"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginRight="120dp"
+        android:gravity="center"
+        android:text="Sign In"
+        android:textColor="#27496D"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="331dp"
+        android:layout_height="57dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@id/tv_signin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="40dp"
+        android:drawableStart="@drawable/round_person_24"
+        android:drawablePadding="10dp"
+        android:background="@drawable/button_background"
+        android:hint="Username"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="331dp"
+        android:layout_height="57dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/et_username"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_background"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="10dp"
+            android:lines="1"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+        <ImageView
+            android:id="@+id/icon_password"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/show"
+            android:layout_centerVertical="true"
+            android:padding="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="#27496D"
+        app:cornerRadius="15dp"
+        android:text="Sign In"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_signin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="217dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="26dp"
+        android:text="Forgot password ?"
+        android:shadowColor="#bfbfbf"
+        android:shadowRadius="5"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:textColor="#27496D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

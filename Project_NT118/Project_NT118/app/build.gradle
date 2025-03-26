@@ -1,0 +1,83 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.projectnt118'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.projectnt118"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+        }
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.mapbox.common:common:23.9.2'
+        force 'com.mapbox.common:okhttp:23.9.2'
+        force 'com.mapbox.mapboxsdk:mapbox-sdk-geojson:6.15.0'
+        force 'com.mapbox.mapboxsdk:mapbox-sdk-turf:6.15.0'
+    }
+}
+
+dependencies {
+    implementation(files("libs/AnyChart-Android-1.1.0.aar"))
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.mapbox.maps:android:10.17.0'
+    implementation 'com.mapbox.navigation:android:2.17.0'
+    implementation "com.mapbox.search:mapbox-search-android-ui:2.5.0"
+    implementation "com.mapbox.search:mapbox-search-android:2.5.0"
+    implementation "com.mapbox.search:place-autocomplete:2.5.0"
+    implementation "com.mapbox.search:offline:2.5.0"
+
+    implementation('org.maplibre.gl:android-sdk:10.0.2') {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+        exclude group: 'org.maplibre.gl', module: 'android-sdk-geojson'
+        exclude group: 'org.maplibre.gl', module: 'android-sdk-turf'
+    }
+
+    // Mapbox SDK
+    implementation('com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v9:0.9.0') {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+        exclude group: 'org.maplibre.gl', module: 'android-sdk-geojson'
+        exclude group: 'org.maplibre.gl', module: 'android-sdk-turf'
+    }
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.locationdelegation
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
